@@ -49,6 +49,11 @@ a{
     font-weight: 300;
     line-height: 1.67; /* 166.667% */
 }
+
+
+
+
+
 /* ======header====== */
 .header{
     background: var(--header-bg);
@@ -72,6 +77,7 @@ a{
     font-weight: 300;
     line-height: 1.75; /* 175% */
 }
+.header__action--login:hover,
 .navbar__link:hover,
 .navbar__link--active{
     color: #fff;
@@ -167,7 +173,7 @@ a{
 }
 .service__desc{
     max-width: 468px;
-    margin: 18px auto;
+    margin: 18px auto 0;
 }
 
 .service__row{
@@ -177,7 +183,7 @@ a{
     justify-content: space-between;
 }
 .service__img{
-    max-width: 570px;
+    width: 570px;
     height: 570px;
     border-radius: 12px;
     object-fit: cover;
@@ -229,4 +235,103 @@ a{
 }
 .service__btn{
     margin-top: 55px;
+}
+
+
+/* =========work========== */
+.work{
+    padding: 100px 0;
+    background: #F6FBFF;
+}
+.work__desc{
+    max-width: 468px;
+}
+.work__list{
+    margin-top: 86px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 30px;
+}
+.work-item{
+    padding: 43px;
+    border-radius: 4px;
+    background: #FFF;
+    border: 16px solid #EAF6FF;
+    transition:all ease-in 0.3s;
+}
+.work-item:hover{
+    border-color: #2E80CE;
+    transform: translateY(-16px);
+}
+.work-item:hover .work-item__more{ /*khi hover vào "work-item" thì tác động lên "work-item__more"*/
+    color: #2E80CE;
+    font-weight: 400;
+}
+
+
+.work-item__heading{
+    margin-top: 18px;
+    color: #10375C;
+    font-size: 2.6rem;
+    font-weight: 600;
+    line-height: 1.38; /* 138.462% */
+}
+.work-item__desc{
+    margin-top: 28px;
+    color: #575F66;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.75; /* 175% */
+}
+.work-item__more{
+    display: inline-block;
+    margin-top: 18px;
+    color: #575F66;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.75; /* 175% */
+}
+
+
+/* ============about============ */
+.about{
+    padding: 85px 0 206px;
+    margin-top: 85px;
+}
+.about-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.about__media{
+    width: 49%;
+}
+.about__img{
+    display: flex;
+    position: relative;
+}
+.about__img--big{
+    display: flex;
+    width: 512px;
+    height: 370px;
+    box-shadow: 0px 14px 28px 0px rgba(0, 0, 0, 0.07);
+}
+
+.about__img--small,
+.about__img--big{
+    border-radius: 6px;
+    object-fit: cover;
+}
+.about__img--small{
+    position: absolute;
+    top: 121px;
+    left: 238px;
+    width: 332px;
+    height: 370px;
+}
+.about-conten{
+    width: 40%;
+}
+.about-conten__btn{
+    margin-top: 38px;
 }
