@@ -1,6 +1,9 @@
 *{
     box-sizing: border-box;
 }
+:root{
+    --header-bg: #10375C;
+}
 html{
     font-size: 62.5%;
 }
@@ -8,4 +11,132 @@ html{
 body{
     font-size: 1.6rem;
     font-family: "Sora", serif;
+}
+/*dùng chung */
+.container{
+    width: 1170px;
+    max-width: calc(100% - 48px);
+    margin: 0 auto;
+}
+a{
+    text-decoration: none;
+}
+.btn{
+    display: inline-block;
+    min-width: 205px;
+    line-height: 60px;
+    border-radius: 999px;
+    background: #2E80CE;
+    color: #FFF;
+    text-align: center;
+    font-size: 18px;
+}
+.btn:hover{
+    opacity: 0.9;
+}
+/* ======header====== */
+.header{
+    background: var(--header-bg);
+    min-height: 100vh;
+    padding-top: 30px;
+}
+.header-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar__list{
+    display: flex;
+}
+.header__action--login,
+.navbar__link{
+    padding: 8px 21px;
+    color: #C9D2DA;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.75; /* 175% */
+}
+.navbar__link:hover,
+.navbar__link--active{
+    color: #fff;
+    text-shadow: 1px 0 0 currentColor;
+}
+.navbar__link--active::before{
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #fff;
+    position: relative;
+    right: 8px;
+    top: -3px;
+}
+.header__action--signup{
+    min-width: 104px;
+    line-height: 44px;
+    font-size: 1.6rem;
+}
+.header__action--login{
+    margin-right: 7px;
+}
+
+/* =============hero=============== */
+.hero{
+    padding-top: 76px;
+    display: flex;
+    align-items: center;
+}
+
+.hero__content{
+    width: 44%;
+}
+
+.hero__media{
+    flex: 1;
+}
+.hero__heading{
+    color: #FFF;
+    font-size: 7rem;
+    font-weight: 600;
+    line-height: 1.14; /* 114.286% */
+    letter-spacing: -1.4px;
+}
+.hero__desc{
+    margin-top: 22px;
+    color: #C9D2DA;
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 1.67; /* 166.667% */
+}
+.hero__row{
+    margin-top: 38px;
+    display: flex;
+    align-items: center;
+    column-gap: 38px;
+}
+.hero__phone{
+    color: #FFF;
+    font-size: 18px;
+    line-height: 1.67; /* 166.667% */
+}
+.hero__images{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.hero__img{
+    border-radius: 6px;
+    object-fit: cover;
+}
+.hero__img-large{
+    width: 330px;
+    height: 540px;
+    margin-right: -6px;
+    z-index: 1;
+}
+.hero__img-small{
+    width: 210px;
+    height: 410px;
 }
