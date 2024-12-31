@@ -548,3 +548,31 @@ a{
 .blog-item:hover .blog-item__more{
     color: #2E80CE;
 }
+
+
+
+/* =========appointment============= */
+.appointment{
+    margin: 85px 0;
+}
+.appointment__inner{
+    padding: 100px 178px;
+    background: #F6FBFF;
+    text-align: center;
+}
+.appointment__heading::after{
+    content: "";
+    display: block;
+    top: 18px;
+    width: 136px;
+    height: 2px;
+    background: #2E80CE;
+    margin: 18px auto 0;
+}
+.appointment__desc{
+    margin: 18px auto;
+    max-width: 617px;
+}
+.appointment__btn{
+    margin-top: 38px;
+}
