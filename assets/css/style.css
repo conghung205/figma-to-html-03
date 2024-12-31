@@ -13,6 +13,13 @@ body{
     font-family: "Sora", serif;
 }
 /*common (dùng chung) */
+
+input,textarea,select,button{   /*các thẻ này nó ăn theo trình duyệt. nên phải set cho nó kế thừa theo cha */
+    font-family: inherit; /*kế thừa*/
+    font-size: inherit; /*kế thừa*/
+}
+
+
 .container{
     width: 1170px;
     max-width: calc(100% - 48px);
@@ -553,7 +560,7 @@ a{
 
 /* =========appointment============= */
 .appointment{
-    margin: 85px 0;
+    margin-top: 85px;
 }
 .appointment__inner{
     padding: 100px 178px;
@@ -575,4 +582,118 @@ a{
 }
 .appointment__btn{
     margin-top: 38px;
+}
+
+
+/* ========footer====== */
+.footer{
+    margin-top: 170px;
+    padding-top: 100px;
+    background: #10375C;
+    font-family: "Open Sans", serif;
+}
+.footer-top{
+    display: grid;
+    grid-template-columns: 1fr 0.4fr 0.4fr 1fr;
+    column-gap: 78px;
+}
+.footer__desc{
+    margin-top: 21px;
+    color: #A9B3BB;
+    font-size: 1.6rem;
+    line-height: 1.75; /* 175% */
+}
+.footer__heading{
+    color: #FFF;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.75; /* 175% */
+}
+.footer__list{
+    margin: 20px 0 28px;
+}
+
+.footer__item{
+    margin-bottom: 10px;
+}
+
+.footer__link{
+    display: inline-block;
+    color: #A9B3BB;
+    font-size: 1.4rem;
+    line-height: 1.86;
+    white-space: nowrap; /*Không xuống hàng*/
+}
+.footer__link:hover{
+    text-decoration: underline;
+    color: #FFF;
+}
+
+.footer__social{
+    margin: 20px 0 28px;
+    display: flex;
+    column-gap: 10px;
+}
+.footer__social-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #fff;
+    color: #2E80CE;
+    transition: .3s;
+}
+.footer__social-btn:hover{
+    background-color: #2E80CE;
+    color: #fff;
+}
+.footer-form{
+    margin-top: 10px;
+    display: flex;
+    column-gap: 12px;
+}
+.footer-form__input{
+    width: 212px;
+    height: 46px;
+    border-radius: 4px;
+    border: 1px solid #406181;
+    background: transparent;
+    outline: none;
+    padding: 10px;
+    color: #fff;
+}
+.footer-form__input::placeholder{
+    color: #9CA8B1;
+    font-size: 1.4rem;
+    line-height: 1.86; /* 185.714% */
+}
+.footer-form__submit{
+    min-width: 108px;
+    line-height: 46px;
+    border-radius: 4px;
+    background: #2E80CE;
+    border: none;
+    color: #FFF;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+.footer-form__submit:hover{
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+
+
+/* ========copyright========== */
+.footer__copyright{
+    border-top: 1px solid #406181;
+}
+.footer__copyright-text{
+    padding: 28px 0 42px;
+    color: #AAB3BA;
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 1.86; /* 185.714% */
 }
