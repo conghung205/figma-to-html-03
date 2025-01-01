@@ -1,0 +1,104 @@
+/* PC */
+@media (min-width: 992px) {
+.mobile-header{
+    display: none;
+}
+}
+
+/* tablet and mobile */
+@media (max-width: 991.98px) {
+    .navbar{
+        display: none;
+    }
+    /* chuyển logo vào giữa */
+    .header-top{
+        position: relative; /*đặt positon cho thẻ cha để căn giữa*/
+    }
+    /* căn giữa logo */
+    .header__logo{
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    /* căn lại vị trí của menu icon */
+    .menu-header__icon{
+        position: absolute;
+        top: 38px;
+        left: 26px;
+        color: #fff;
+        width: 24px;
+    }
+    /* overlay (lớp phủ) */
+    .menu-overlay{
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.3);
+        inset: 0;
+        z-index: 1;
+        /* bình thường ẩn lớp phủ đi đi */
+        opacity: 0;/*để nó trong suốt*/
+        visibility: hidden;/*ẩn hẳn phần này để tương tác vs các ptu khác*/
+        transition: opacity 0.5s, visibility 0.5s;
+    }
+    /* nếu checkbox được check thì hiện overlay */
+    .menu-checkbox:checked ~ .menu-overlay{ /*nếu được check thì tác động vào overlay*/
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* code cho menu drawer */
+    .menu-drawer{
+        padding: 60px;
+        position: fixed;
+        background-color: #2e1919;
+        inset: 0 40% 0 0;
+        z-index: 2;
+        transform: translateX(-100%);/*tạm ẩn sang bên trái*/
+        transition: transform .5s;
+    }
+    /* nếu checkbox được check thì hiện lại menu */
+    /* nếu .menu-checkbox vào trạng thái checked
+    thì tác động vào class menu-drawer
+    */
+    .menu-checkbox:checked ~ .menu-drawer{
+        transform: translateX(0);
+    }
+
+    /* menu top */
+    .menu-drawer__top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .close__menu{
+        width: 24px;
+        color: #fff;
+        cursor: pointer;
+    }
+    #navbar__list--mobile{
+        margin-top: 25px;
+    }
+    .navbar__link{
+        display: flex;
+        align-items: center;
+        font-size: 2rem;
+    }
+    .navbar__link:hover{
+        background-color: #00ffff37;
+    }
+}
+
+/* tablet */
+@media (min-width: 768px) and (max-width: 991.98px){
+
+}
+
+
+/* mobile */
+@media (max-width: 767.98px) {
+
+}
+
+
+.hero, .footer, main{
+    display: none;
+}
